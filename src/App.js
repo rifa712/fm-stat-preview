@@ -6,14 +6,14 @@ function App() {
   return (
     <Fragment>
       <div className='w-full h-full min-h-screen flex justify-center items-center bg-main-bg text-white font-inter'>
-        <div className='flex flex-col-reverse w-12/12 md:flex-row justify-between bg-card-bg rounded-lg m-4'>
+        <div className='flex flex-col-reverse w-12/12 md:flex-row justify-between bg-card-bg rounded-xl m-4'>
           <div
             className='w-full md:w-6/12 text-center md:text-left'
             style={{
               padding: '30px',
             }}
           >
-            <h1 className=' font-700 text-lg md:text-4xl'>
+            <h1 className=' font-700 text-3xl md:text-4xl'>
               Get <span className='text-accent'>insights</span> that help your
               business grow.
             </h1>
@@ -21,8 +21,9 @@ function App() {
               Discoverthe benefits of data analytics and make better decisions
               regarding revenue, customer experience, and overall efficiency.
             </p>
+            {/* STAT BLYAT */}
             <div className='flex w-full '>
-              <div className='w-full flex gap-2 flex-col md:flex-row md:flex-wrap mt-12 md:mt-24'>
+              <div className='w-full flex gap-2 flex-col mb-sm:flex-row md:flex-wrap mt-12 md:mt-24'>
                 <div className='font-inter text-white flex-1'>
                   <h1 className='font-700 text-xl uppercase'>10k+</h1>
                   <p
@@ -63,14 +64,10 @@ function App() {
             </div>
           </div>
           <div
-            className='relative w-full md:w-6/12 h-full md:h-0'
-            style={{
-              backgroundImage: `url(${imgHeader})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
+            className='relative w-full md:w-6/12 bg-cover md:rounded-tl-none md:rounded-r-xl rounded-t-xl rounded-br-none'
+            style={{ backgroundImage: `url(${imgHeader})`, minHeight: '320px' }}
           >
-            <div className='absolute w-full h-full top-0 bg-accent opacity-70'></div>
+            <div className='absolute w-full h-full top-0 bg-accent opacity-70 mix-blend-multiply md:rounded-tl-none md:rounded-r-xl rounded-t-xl rounded-br-none'></div>
           </div>
         </div>
       </div>
